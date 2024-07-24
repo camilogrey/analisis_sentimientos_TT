@@ -1,7 +1,7 @@
 # analisis_sentimientos_TT
 Análisis de sentimientos para talento Tech 
 
-# Desarrollo del Business Case (Módulo 1)
+# Desarrollo del Business Case 
 
 ## Selección del proyecto (Bases de datos)
 - Extracción de datos del ayuntamiento del municipio de Móstoles de la comunidad de Madrid a partir de las reseñas en Google, mediante técnicas de Web Scraping, APIs o aplicaciones que permitan su extracción.
