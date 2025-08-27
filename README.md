@@ -1,46 +1,80 @@
-# analisis_sentimientos_TT
-Análisis de sentimientos para talento Tech 
+# 🗣️ Análisis de Sentimientos de Opiniones Ciudadanas con NLP y Machine Learning
 
-# Desarrollo del Business Case 
+## 🚀 Descripción
+Este proyecto aplica **Procesamiento de Lenguaje Natural (NLP)** y **Machine Learning** para analizar reseñas de Google sobre el **Ayuntamiento de Móstoles (Madrid, España)**.  
+El objetivo es evaluar la evolución de la percepción ciudadana, identificar temas recurrentes y generar **insights accionables** para mejorar la gestión pública.  
 
-## Selección del proyecto (Bases de datos)
-- Extracción de datos del ayuntamiento del municipio de Móstoles de la comunidad de Madrid a partir de las reseñas en Google, mediante técnicas de Web Scraping, APIs o aplicaciones que permitan su extracción.
+---
 
-## Definición del problema o la oportunidad
-- Evaluar la evolución de la percepción de satisfacción de los ciudadanos hacia la alcaldía a través del análisis de las reseñas de Google y proporcionar insights para mejorar la gestión y la satisfacción del público.
+## 🎯 Objetivos del Proyecto
+- Estimar el **sentimiento predominante** de las reseñas (positivo, neutral o negativo).  
+- Analizar la **evolución temporal** de la percepción ciudadana hacia la alcaldía.  
+- Identificar los **temas clave** más mencionados (infraestructura, servicios, limpieza, transporte, etc.).  
+- Proveer **recomendaciones** basadas en la voz ciudadana.  
 
-## Definir los Objetivos del proyecto:
-- Estimar cuál es el sentimiento predominante de los reviews frente a dicho ayuntamiento.
-- Evaluar la evolución de la percepción pública de la alcaldía desde el origen de las reviews en Google.
-- Encontrar cuáles son los aspectos más relevantes sobre los que más opinan los reviewers.
-- Reconocer la importancia de las reseñas de Google como una fuente valiosa de retroalimentación para entender las preocupaciones y expectativas de los ciudadanos.
+---
 
-## Solución propuesta
-Los siguientes son los pasos propuestos para solucionar el problema mencionado:
+## 🗂️ Dataset
+- **Fuente:** Reseñas públicas de Google Maps sobre el Ayuntamiento de Móstoles.  
+- **Variables clave:** texto de la reseña, fecha, puntuación, autor (anonimizado).  
+- **Obtención de datos:**  
+  - Web Scraping con Python (BeautifulSoup / Selenium).  
+  - Posible uso de APIs o herramientas de extracción.  
 
-1. **Recopilación de datos:**
-   - Extracción de información mediante técnicas de Web Scraping, APIs o aplicaciones que permitan su extracción.
-   - Almacenamiento de los datos en un formato estructurado que permita su análisis posterior.
+---
 
-2. **Preprocesamiento de datos:**
-   - Limpieza de datos para eliminar reseñas duplicadas, irrelevantes o spam.
-   - Normalizar el texto de las reseñas, eliminando caracteres especiales y convirtiéndolo todo a minúsculas para un análisis uniforme.
-   - Realizar una clasificación por fecha para organizar las reseñas en orden cronológico.
+## 🛠️ Tecnologías y Herramientas
+- **Lenguaje:** Python 3.x  
+- **Librerías NLP:** NLTK, spaCy, scikit-learn, TextBlob / HuggingFace Transformers  
+- **Visualización:** matplotlib, seaborn, Plotly  
+- **Preprocesamiento:** pandas, regex, scikit-learn (TF-IDF, CountVectorizer)  
+- **Modelos ML:** regresión logística, Naive Bayes, o modelos BERT para clasificación de sentimiento  
 
-3. **Análisis de sentimientos:**
-   - Utilizar técnicas de ML para asignar un puntaje de sentimiento a cada reseña.
-   - Clasificar las reseñas como positivas, neutrales o negativas según el puntaje de sentimiento obtenido.
+---
 
-4. **Visualización y análisis exploratorio de datos:**
-   - Crear gráficos y visualizaciones que muestren la distribución del sentimiento a lo largo del tiempo.
-   - Identificar tendencias, picos de positividad o negatividad, y patrones recurrentes en las reseñas.
+## 📈 Metodología
+1. **Extracción de datos:** Web Scraping / API de Google Maps.  
+2. **Preprocesamiento:**  
+   - Limpieza de duplicados y spam.  
+   - Normalización de texto (minúsculas, stopwords, stemming/lemmatización).  
+   - Clasificación cronológica de reseñas.  
+3. **Análisis de Sentimientos:**  
+   - Modelos supervisados / lexicón basado.  
+   - Clasificación en positivo, neutral y negativo.  
+4. **Análisis Temático:**  
+   - Topic Modeling (LDA / BERTopic).  
+   - Identificación de temas clave (infraestructura, servicios, transporte, etc.).  
+5. **Visualización:**  
+   - Tendencias temporales de sentimiento.  
+   - Distribución de temas y subtemas.  
+6. **Insights y Recomendaciones:**  
+   - Diagnóstico de satisfacción ciudadana.  
+   - Propuestas de mejora para la gestión municipal.  
 
-5. **Identificación de temas clave:**
-   - Utilizar técnicas de análisis de temas para identificar los temas más frecuentes mencionados en las reseñas.
-   - Categorizar los temas en áreas como infraestructura, servicios públicos, transporte, seguridad, fiestas, salud, limpieza de acuerdo a los resultados.
+---
 
-6. **Generación de insights y recomendaciones:**
-   - Evaluar cuál es el sentimiento popular frente al ente de estudio.
-   - Analizar los resultados obtenidos del análisis de sentimientos y la identificación de temas clave.
-   - Identificar cuál ha sido la evolución de las opiniones durante el período determinado del estudio.
-   - Formular recomendaciones específicas para mejorar la gestión y la satisfacción del público en áreas identificadas como críticas.
+## 📊 Resultados esperados
+- Identificación de los principales **drivers de satisfacción/insatisfacción**.  
+- Visualizaciones sobre la evolución de la percepción ciudadana en el tiempo.  
+- Insights prácticos para mejorar áreas críticas como limpieza, seguridad o transporte.  
+
+---
+
+## 💡 Posibles Usos
+- Herramienta de **inteligencia ciudadana** para gobiernos locales.  
+- Soporte en **toma de decisiones de políticas públicas**.  
+- Análisis de reputación online de instituciones públicas.  
+
+---
+
+## 📌 Próximos pasos
+- Ampliar el análisis a otros municipios de Madrid.  
+- Implementar dashboards interactivos (Power BI / Tableau / Streamlit).  
+- Automatizar la recolección periódica de nuevas reseñas.  
+
+---
+
+## 👤 Autor
+**[Camilo García Rey]**  
+- LinkedIn: https://www.linkedin.com/in/camilo-garcia-rey/  
+- GitHub Portfolio: https://github.com/camilogrey?tab=repositories 
