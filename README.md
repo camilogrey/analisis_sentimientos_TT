@@ -33,7 +33,7 @@ El objetivo es evaluar la evolución de la percepción ciudadana, identificar te
 ---
 
 ## 📈 Metodología
-1. **Extracción de datos:** Web Scraping / API de Google Maps.  
+1. **Extracción de datos:** Web Scraping / API.  
 2. **Preprocesamiento:**  
    - Limpieza de duplicados y spam.  
    - Normalización de texto (minúsculas, stopwords, stemming/lemmatización).  
